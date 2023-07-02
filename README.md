@@ -3,7 +3,9 @@
 # Dio-Bank-System
 
 Creating a Bank system with Python
+
 Criando um Sistema Bancário com Python
 
 Running this app
+
 Rodando este app
