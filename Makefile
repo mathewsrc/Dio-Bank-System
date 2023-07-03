@@ -13,7 +13,10 @@ format:
 
 lint:
 	@echo "Liting .py"
-	pylint --disable=R,C,W0613 *.py
+	pylint --disable=R,C *.py
+
+run-app:
+	python main.py
 
 docker-build:
 	@echo "Building Docker container"
