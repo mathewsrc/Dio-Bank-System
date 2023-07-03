@@ -15,6 +15,10 @@ lint:
 	@echo "Liting .py"
 	pylint --disable=R,C *.py
 
+test:
+	@echo "Testing app"
+	python -m pytest -vv --cov=main test_main.py
+
 run-app:
 	python main.py
 
@@ -27,7 +31,7 @@ docker-run:
 	docker run -it --rm app-docker python main.py 
 
 docker-cleanup:
-	@echo "Cleaning image and container"
+	@echo "Cleaning Docker image and container"
 	docker image rm app-docker
 	docker images
 

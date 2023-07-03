@@ -2,10 +2,12 @@ import click
 import textwrap
 import re
 
+
 def is_valid_date(date_str):
-    pattern = r'^\d{2}-\d{2}-\d{4}$'  
+    pattern = r"^\d{2}-\d{2}-\d{4}$"
     match = re.match(pattern, date_str)
     return bool(match)
+
 
 def display_menu():
     menu = """\n
@@ -26,8 +28,13 @@ def deposit(balance, value, extract, /):
         balance += value
         extract += f"Depósito: R$ {value:.2f}\n"
     else:
-        click.echo("\nOperação falhou! O valor informado é inválido.")
+        click.echo(
+            click.style(
+                "\nOperação falhou! O valor informado é inválido.", bg="red", fg="white"
+            )
+        )
 
+    click.echo(click.style("\nValor depositado com sucesso", bg='green', fg='white'))
     return balance, extract
 
 
@@ -37,18 +44,41 @@ def withdraw(*, balance, value, extract, limit, number_withdrawals, withdrawal_l
     exceeded_withdrawals = number_withdrawals >= withdrawal_limit
 
     if exceeded_balance:
-        click.echo("\nOperação falhou! Você não tem saldo suficiente.")
+        click.echo(
+            click.style(
+                "\nOperação falhou! Você não tem saldo suficiente.",
+                bg="red",
+                fg="white",
+            )
+        )
     elif exceeded_limit:
-        click.echo("\nOperação falhou! O valor do saque excede o limite.")
+        click.echo(
+            click.style(
+                "\nOperação falhou! O valor do saque excede o limite.",
+                bg="red",
+                fg="white",
+            )
+        )
     elif exceeded_withdrawals:
-        click.echo("\nOperação falhou! Número máximo de saques excedido.")
+        click.echo(
+            click.style(
+                "\nOperação falhou! Número máximo de saques excedido.",
+                bg="red",
+                fg="white",
+            )
+        )
     elif value > 0:
         balance -= value
         extract += f"Saque: R$ {value:.2f}\n"
         number_withdrawals += 1
     else:
-        click.echo("\nOperação falhou! O valor informado é inválido.")
+        click.echo(
+            click.style(
+                "\nOperação falhou! O valor informado é inválido.", bg="red", fg="white"
+            )
+        )
 
+    click.echo(click.style("\nValor sacado com sucesso", bg='green', fg='white'))
     return balance, extract
 
 
@@ -68,7 +98,7 @@ def create_user(users):
         return
 
     name = click.prompt("Informe o nome completo", type=str)
-    
+
     while True:
         birthday = input("Informe a data de nascimento (dd-mm-aaaa): ")
         if is_valid_date(birthday):
@@ -84,7 +114,7 @@ def create_user(users):
         {"nome": name, "data_nascimento": birthday, "cpf": cpf, "endereço": address}
     )
 
-    click.echo("\nUsuário criado com sucesso!")
+    click.echo(click.style("\nUsuário criado com sucesso!", bg='green', fg='white'))
 
 
 def filter_user(cpf, users):
@@ -97,7 +127,7 @@ def create_account(agency, account_number, users):
     user = filter_user(cpf, users)
 
     if user:
-        click.echo("\nConta criada com sucesso!")
+        click.echo(click.style("\nConta criada com sucesso!", bg='green', fg='white'))
         return {"agencia": agency, "numero_conta": account_number, "usuario": user}
 
     click.echo("\nUsuário não encontrado, fluxo de criação de conta encerrado!")
@@ -115,6 +145,7 @@ def list_accounts(accounts):
 
 
 @click.command()
+@click.version_option("1.0")
 def main():
     balance = 0
     number_withdrawals = 0
@@ -164,7 +195,11 @@ def main():
 
         else:
             click.echo(
-                "\nOperação inválida, por favor selecione novamente a operação desejada."
+                click.style(
+                    "\nOperação inválida, por favor selecione novamente a operação desejada.",
+                    bg="red",
+                    fg="white",
+                )
             )
 
 
