@@ -12,7 +12,7 @@ This project simulates a bank system where you can deposit, withdraw, create acc
 
 You can run this app using the bash command-line interface or by using Docker:
 
-1. Command-line
+### 1. Command-line
 
    1.1 Create a virtual environment
 
@@ -44,7 +44,7 @@ You can run this app using the bash command-line interface or by using Docker:
    python main.py
    ```
 
-2. Docker
+### 2. Docker
 
     Build an image from the Dockerfile
     ```bash
@@ -60,7 +60,7 @@ You can run this app using the bash command-line interface or by using Docker:
 > For Windows users install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 
-A third option is to use the Linux Makefile utility. The Makefile contains options for:
+### A third option is to use the Linux Makefile utility. The Makefile contains options for:
 
 > **Note**
 > Windows users will need to install the Makefile. More information can be founded here: https://earthly.dev/blog/makefiles-on-windows/
