@@ -73,3 +73,8 @@ A third option is to use the Makefile file commands on the terminal. The Makefil
    make docker-cleanup
    ```
 
+9. Run app on terminal
+     ```bash
+   make run-app
+   ```
+
