@@ -57,10 +57,13 @@ You can run this app using the bash command-line interface or by using Docker:
     ```
    
 > **Note**
-> For windows users install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+> For Windows users install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 
-A third option is to use the Makefile file commands on the terminal. The Makefile contains options for:
+A third option is to use the Linux Makefile utility. The Makefile contains options for:
+
+> **Note**
+> Windows users will need to install the Makefile. More information can be founded here: https://earthly.dev/blog/makefiles-on-windows/
 
 1. Setup virtual environment
    ```bash
