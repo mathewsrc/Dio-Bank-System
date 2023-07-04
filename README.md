@@ -8,15 +8,42 @@ Creating a Bank system with Python (Criando um Sistema Bancário com Python)
 
 This project simulates a bank system where you can deposit, withdraw, create accounts, create users, etc.
 
-## Running this app (Rodando este app)
+## Usage (Rodando este app)
 
 You can run this app using the bash command-line interface or by using Docker:
 
 1. Command-line
 
+   1.1 Create a virtual environment
+
+   ```bash
+   python -m venv .env
+   ```
+
+   1.2 Activate the virtual environment 
+
+   Linux
+   ```bash
+   source .env/bin/activate
+   ```
+
+   Windows
+   ```bash
+   source .env/Scripts/activate
+   ```
+
+   1.3 Install the dependencies
+
+   ```bash
+   pip install --upgrade pip  && pip install -r requirements.txt
+   ```
+
+   1.4 Run the app
+   
    ```bash
    python main.py
    ```
+
 2. Docker
 
     Build an image from the Dockerfile
