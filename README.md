@@ -8,6 +8,14 @@ Creating a Bank system with Python (Criando um Sistema Bancário com Python)
 
 This project simulates a bank system where you can deposit, withdraw, create accounts, create users, etc.
 
+## Preview
+
+
+
+https://github.com/mathewsrc/Dio-Bank-System/assets/94936606/862f3c70-0379-48ed-9c99-83208720356b
+
+
+
 ## Usage (Rodando este app)
 
 You can run this app using the bash command-line interface or by using Docker:
