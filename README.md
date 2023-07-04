@@ -31,3 +31,45 @@ You can run this app using the bash command-line interface or by using Docker:
    
 > **Note**
 > For windows users install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+A third option is to use the Makefile file commands on the terminal. The Makefile contains options for:
+
+1. Setup virtual environment
+   ```bash
+   make setup
+   ```
+   
+2. Install requirements
+    ```bash
+    make install
+    ```
+
+3. Format code
+   ```bash
+   make format
+   ```
+
+4. Lint code
+    ```bash
+    make lint
+    ```
+
+5. Run tests
+    ```bash
+    make test
+     ```
+6. Build Docker image
+    ```bash
+   make docker-build
+   ```
+
+7. Run Docker container
+    ```bash
+   make docker-run
+   ```
+
+8. Delete Docker image
+    ```bash
+   make docker-cleanup
+   ```
+
