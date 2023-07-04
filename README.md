@@ -32,6 +32,7 @@ You can run this app using the bash command-line interface or by using Docker:
 > **Note**
 > For windows users install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
+
 A third option is to use the Makefile file commands on the terminal. The Makefile contains options for:
 
 1. Setup virtual environment
