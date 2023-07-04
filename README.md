@@ -47,11 +47,13 @@ You can run this app using the bash command-line interface or by using Docker:
 ### 2. Docker
 
    Build an image from the Dockerfile
+    
     ```bash
     docker build --tag app-docker .
     ```
   
    Run the container
+   
     ```bash
     docker run -it --rm app-docker python main.py
     ```
