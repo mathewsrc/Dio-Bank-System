@@ -22,13 +22,13 @@ You can run this app using the bash command-line interface or by using Docker:
 
 ### 1. Command-line
 
-   1.1 Create a virtual environment
+   1.1 Creating a virtual environment
 
    ```bash
    python -m venv .env
    ```
 
-   1.2 Activate the virtual environment 
+   1.2 Activating the virtual environment 
 
    Linux
    ```bash
@@ -40,13 +40,13 @@ You can run this app using the bash command-line interface or by using Docker:
    source .env/Scripts/activate
    ```
 
-   1.3 Install the dependencies
+   1.3 Installing the dependencies
 
    ```bash
    pip install --upgrade pip  && pip install -r requirements.txt
    ```
 
-   1.4 Run the app
+   1.4 Running the app
    
    ```bash
    python main.py
@@ -54,12 +54,14 @@ You can run this app using the bash command-line interface or by using Docker:
 
  ### 2. Docker
 
-   Build an image from the Dockerfile
+Docker is a tool used to develop, run, and ship containers. Containers provide portability (runs on any infrastructure), reproducibility (runs the same anywhere), and security (isolates the application from the host).
+
+   Building an image from the Dockerfile
    ```bash
    docker build --tag app-docker .
    ```
   
-   Run the container
+   Running the Docker container
    ```bash
    docker run -it --rm app-docker python main.py
    ```
@@ -68,7 +70,11 @@ You can run this app using the bash command-line interface or by using Docker:
 > For Windows users install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 
-### A third option is to use the Linux Makefile utility. The Makefile contains options for:
+### A third option is to use the Linux make utility. 
+
+The Make utility is a software tool for managing and maintaining computer programs. It reads its instruction from a file called Makefile. The Makefile is a way of automating software building and tasks. With Makefile we can write complex commands with a given name.
+
+The Makefile contains options for:
 
 > **Note**
 > Windows users will need to install the Makefile. More information can be founded here: https://earthly.dev/blog/makefiles-on-windows/
