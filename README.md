@@ -79,7 +79,7 @@ The Makefile contains options for:
 > **Note**
 > Windows users will need to install the Makefile. More information can be founded here: https://earthly.dev/blog/makefiles-on-windows/
 
-1. Setup virtual environment
+1. Create the virtual environment
    ```bash
    make setup
    ```
