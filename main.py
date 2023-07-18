@@ -72,13 +72,7 @@ def withdraw(*, balance, value, extract, limit, number_withdrawals, withdrawal_l
         extract += f"Saque: R$ {value:.2f}\n"
         number_withdrawals += 1
     else:
-        click.echo(
-            click.style(
-                "\nOperação falhou! O valor informado é inválido.", bg="red", fg="white"
-            )
-        )
-
-    click.echo(click.style("\nValor sacado com sucesso", bg='green', fg='white'))
+        click.echo(click.style("\nValor sacado com sucesso", bg='green', fg='white'))
     return balance, extract
 
 
